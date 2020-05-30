@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="用户管理系统测试套件">
+    <test name="loginTrue">
+     <groups>
+         <dependencies>
+             <group name = "addUser" depends-on="LoginTrue"/>
+         </dependencies>
+     </groups>
+    <classes>
+        <class name="com.course.cases.LoginTest">
+            <include name="LoginTrue" />
+            <!--include name="LoginFalse" /-->
+        </class>
+
+        <class name="com.course.cases.AddUserTest">
+            <methods>
+                <include name="addUser"/>
+            </methods>
+        </class>
+        <class name="com.course.cases.GetUserInfoListTest">
+            <methods>
+                <include name="getUserListInfo"/>
+            </methods>
+        </class>
+
+        <class name="com.course.cases.GetUserInfoTest">
+            <methods>
+                <include name="getUserInfo"/>
+            </methods>
+        </class>
+        <class name="com.course.cases.UpdateUserInfoTest">
+            <methods>
+                <include name="updateUserInfo"/>
+            </methods>
+        </class>
+
+    </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.course.config.ExtentTestNGIReporterListener"/>
+    </listeners>
+
+
+
+
+
+
+
+
+
+</suite>
